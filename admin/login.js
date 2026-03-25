@@ -9,7 +9,7 @@ const password = document.getElementById("password").value;
 
 try{
 
-const response = await fetch("https://sportcatalogapi-production.up.railway.app/api/apiAuth/login",{
+const response = await fetch("https://sportcatalogapi-production.up.railway.app/apiAuth/login",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"
