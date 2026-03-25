@@ -8,7 +8,8 @@ initDragDrop();
 initForm();
 
 });
-const API_URL = "https://localhost:7079";
+const API_BASE = "https://sportcatalogapi-production.up.railway.app";
+const API_URL = "https://sportcatalogapi-production.up.railway.app/api";
 function initDragDrop(){
 
 const dropZone = document.getElementById("drop-zone");
@@ -70,7 +71,7 @@ if(file){
 formData.append("image", file);
 }
 
-await fetch("https://localhost:7079/api/products",{
+await fetch(`${API_URL}/products`,{
 method:"POST",
 headers:{
 Authorization:`Bearer ${token}`
@@ -86,7 +87,7 @@ loadProducts();
 
 async function loadCategories(){
 
-const response = await fetch("https://localhost:7079/api/Category");
+const response = await fetch(`${API_URL}/Category`);
 
 const categories = await response.json();
 
@@ -109,7 +110,7 @@ select.appendChild(option);
 
 async function loadProducts(){
 
-const response = await fetch("https://localhost:7079/api/products/all");
+const response = await fetch(`${API_URL}/all`);
 
 const products = await response.json();
 
@@ -128,7 +129,7 @@ products.forEach(p=>{
 const div = document.createElement("div");
 
 div.innerHTML = `
-<img src="${API_URL}${p.imageUrl}" width="100">
+<img src="${API_BASE}${p.imageUrl}" width="100">
 <p>${p.name}</p>
 <p>$${p.price}</p>
 <button onclick="deleteProduct('${p.id}')">Eliminar</button>
@@ -142,7 +143,7 @@ container.appendChild(div);
 
 async function deleteProduct(id){
 
-await fetch(`https://localhost:7079/api/products/${id}`,{
+await fetch(`${API_URL}/products/${id}`,{
 method:"DELETE",
 headers:{
 Authorization:`Bearer ${token}`
