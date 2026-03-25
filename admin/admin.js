@@ -110,7 +110,7 @@ select.appendChild(option);
 
 async function loadProducts(){
 
-const response = await fetch(`${API_URL}/all`);
+const response = await fetch(`${API_URL}/products/all`);
 
 const products = await response.json();
 
