@@ -5,14 +5,14 @@
 const params = new URLSearchParams(window.location.search);
 
 const categoryId = params.get("id");
-const API_URL = "https://localhost:7079";
+const API_URL = "https://sportcatalogapi-production.up.railway.app";
 
 
 
 async function cargarProductos(){
 
 const response = await fetch(
-`https://localhost:7079/api/products/category/${categoryId}`
+`${API_URL}/api/products/category/${categoryId}`
 );
 
 const products = await response.json();
@@ -56,7 +56,7 @@ container.appendChild(div);
 async function cargarCategoria(){
 
 const response = await fetch(
-`https://localhost:7079/api/Category/${categoryId}`
+`${API_URL}/api/Category/${categoryId}`
 );
 
 const category = await response.json();

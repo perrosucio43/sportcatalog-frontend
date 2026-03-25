@@ -1,5 +1,5 @@
  cart = JSON.parse(localStorage.getItem("cart")) ||[];
-const API_URL = "https://localhost:7079";
+const API_URL = "https://sportcatalogapi-production.up.railway.app";
 function renderCart(){
 
 const container = document.getElementById("cart-items");

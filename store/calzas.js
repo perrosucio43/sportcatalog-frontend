@@ -1,10 +1,10 @@
-const API_URL = "https://localhost:7079";
+const API_URL = "https://sportcatalogapi-production.up.railway.app";
 
 
 async function cargarProductosInicio(){
 
 const response = await fetch(
-`https://localhost:7079/api/products/category/f0afa498-9e9c-4e24-935b-02eca2816eb1`
+`${API_URL}/api/products/category/f0afa498-9e9c-4e24-935b-02eca2816eb1`
 );
 
 const products = await response.json();
@@ -59,8 +59,3 @@ document.addEventListener("DOMContentLoaded", cargarProductosInicio);
 
 
 
-function volverInicio(){
-
-window.location.href = "index.html";
-
-}
