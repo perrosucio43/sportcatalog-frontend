@@ -16,7 +16,7 @@ div.classList.add("cart-item");
 
 div.innerHTML = `
 
-<img src="${API_URL}${item.image}" width="100">
+<img src="${item.image}" width="100">
 
 <p>${item.name}</p>
 

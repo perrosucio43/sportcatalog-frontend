@@ -21,7 +21,7 @@ div.classList.add("product-card");
 
 div.innerHTML = `
 
-<img src="${API_URL}${p.imageUrl}" width="100">
+<img src="${p.imageUrl}" width="100">
 <p>${p.name}</p>
 <p class="product-price">$${Number(p.price).toLocaleString("es-AR")}</p>
 <button class="add-cart">Agregar al carrito</button>
