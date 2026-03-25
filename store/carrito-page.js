@@ -1,6 +1,8 @@
  cart = JSON.parse(localStorage.getItem("cart")) ||[];
-const API_URL = "https://sportcatalogapi-production.up.railway.app";
-function renderCart(){
+
+ const API_URL = "https://sportcatalogapi-production.up.railway.app";
+const volverBtn = document.getElementById("volver");
+ function renderCart(){
 
 const container = document.getElementById("cart-items");
 
@@ -169,4 +171,13 @@ updateCartCount();
 
 renderCart();
 
+}
+
+
+if(volverBtn){
+volverBtn.addEventListener("click", volverCatalogo);
+}
+
+function volverCatalogo(){
+window.location.href = "index.html";
 }
