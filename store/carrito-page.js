@@ -20,7 +20,7 @@ div.innerHTML = `
 
 <p>${item.name}</p>
 
-<p>$${item.price.toLocaleString("es-ES")}</p>
+<p class="product-price">$${Number(item.price).toLocaleString("es-AR")}</p>
 
 <div class="quantity">
 
@@ -97,12 +97,12 @@ function updateTotal(){
 
 const total = cart.reduce((sum,item)=>{
 
-return sum + item.price * item.quantity;
+return sum + Number(item.price) * item.quantity;
 
 },0);
 
 document.getElementById("cart-total").textContent =
-"Total: $" + total.toLocaleString("es-ES");
+"Total: $" + total.toLocaleString("es-AR");
 
 }
 
