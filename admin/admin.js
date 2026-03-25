@@ -130,7 +130,7 @@ products.forEach(p=>{
 const div = document.createElement("div");
 
 div.innerHTML = `
-<img src="${p.ImageUrl}" width="100">
+<img src="${p.imageUrl}" width="100">
 <p>${p.name}</p>
 <p>$${p.price}</p>
 <button onclick="deleteProduct('${p.id}')">Eliminar</button>
