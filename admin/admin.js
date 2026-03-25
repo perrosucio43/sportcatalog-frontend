@@ -1,5 +1,5 @@
 const token = localStorage.getItem("token");
-
+const logoutBtn = document.getElementById("logout");
 document.addEventListener("DOMContentLoaded", () => {
 
 loadCategories();
@@ -153,3 +153,12 @@ Authorization:`Bearer ${token}`
 loadProducts();
 
 }
+
+function logout(){
+localStorage.removeItem("token");
+window.location.href = "index.html";
+}
+if(logoutBtn){
+logoutBtn.addEventListener("click", logout);
+}
+
