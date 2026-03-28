@@ -265,11 +265,18 @@ object-fit:contain;
 }
 
 /* INSTAGRAM */
-
-.bi-instagram{
+.footer-bottom{
 position:absolute;
-bottom:9px;
-left:45px;
+bottom:15px;
+left:0;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:5px;
+}
+.bi-instagram{
+
 font-size:1.2rem;
 color: rgba(128, 0, 32, 0.3);
 transition: all 0.3s ease;
@@ -280,11 +287,6 @@ color: var(--rojo-borgoña);
 }
 
 .marca-agua{
-position:absolute;
-bottom:10px;
-top: 640px;
-left:50%;
-transform:translateX(-50%);
 font-size: 0.8rem;
 color: rgba(128, 0, 32, 0.3);
 font-weight: bold;
