@@ -269,7 +269,7 @@ object-fit:contain;
 .bi-instagram{
 position:absolute;
 bottom:9px;
-left:80px;
+left:45px;
 font-size:1.2rem;
 color: rgba(128, 0, 32, 0.3);
 transition: all 0.3s ease;
@@ -282,6 +282,7 @@ color: var(--rojo-borgoña);
 .marca-agua{
 position:absolute;
 bottom:10px;
+top: 640px;
 left:50%;
 transform:translateX(-50%);
 font-size: 0.8rem;
@@ -612,7 +613,7 @@ margin-bottom: 10px;
 }
 
 footer .footer-logo{
-font-size: 28px;
+font-size: 18px;
 font-weight: bold;
 color: var(--rojo-borgoña);
 margin-bottom: 15px;

@@ -47,7 +47,7 @@ name: p.name,
 price: p.price,
 image: p.imageUrl
 });
-
+alert('Producto agregado al carrito');
 });
 
 container.appendChild(div);
