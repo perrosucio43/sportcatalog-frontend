@@ -4,13 +4,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <title>Catalogo</title>
+
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Great+Vibes&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
+<body id="page-body">
+
+<!-- Overlay de transición con hojas -->
+<!-- Overlay de transición con hojas para animaciones profesionales -->
+<div id="page-transition">
+    <div class="transition-leaf leaf-verde"></div>
+    <div class="transition-leaf leaf-naranja"></div>
+    <div class="transition-leaf leaf-rojo"></div>
+    <div class="transition-leaf leaf-amarillo"></div>
+</div>
+
+<!-- Partículas de luz dorada flotante -->
+<div class="hoja particle" style="left: 20%"></div>
+<div class="hoja particle" style="left: 50%"></div>
+<div class="hoja particle" style="left: 70%"></div>
+<div class="hoja particle" style="left: 85%"></div>
 
 <div class="container">
 
@@ -111,5 +129,85 @@
 
 
 <script src="calzas.js"></script>
+
+<div id="page-transition">
+      <div class="transition-leaf"></div>
+      <div class="transition-leaf"></div>
+      <div class="transition-leaf"></div>
+      <div class="transition-leaf"></div>
+  </div>
+
+  <div class="hoja hoja--1"></div>
+  <div class="hoja hoja--2"></div>
+  <div class="hoja hoja--3"></div>
+  <div class="hoja hoja--4"></div>
+
+  <!-- Script para animaciones de transición de hojas -->
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const transitionScreen = document.getElementById('page-transition');
+          const leaves = document.querySelectorAll('.transition-leaf');
+
+          // Función para actualizar el color de las hojas según la categoría
+          function updateLeafColors(category) {
+              // Resetear todas las clases primero
+              leaves.forEach(leaf => {
+                  leaf.classList.remove('leaf-verde', 'leaf-naranja', 'leaf-rojo', 'leaf-amarillo');
+              });
+
+              // Asignar colores según categoría
+              if (category === 'calza-larga' || category === 'calzas-largas' || category === 'calza larga') {
+                  document.querySelector('.leaf-verde')?.classList.add('leaf-verde');
+                  document.querySelector('.leaf-amarillo')?.classList.add('leaf-amarillo');
+              } else if (category === 'calza-corta' || category === 'calzas-cortas' || category === 'calza corta') {
+                  document.querySelector('.leaf-naranja')?.classList.add('leaf-naranja');
+                  document.querySelector('.leaf-amarillo')?.classList.add('leaf-amarillo');
+              } else if (category === 'remera' || category === 'remeras') {
+                  document.querySelector('.leaf-rojo')?.classList.add('leaf-rojo');
+                  document.querySelector('.leaf-amarillo')?.classList.add('leaf-amarillo');
+              } else if (category === 'combo' || category === 'combos') {
+                  document.querySelector('.leaf-rojo')?.classList.add('leaf-rojo');
+                  document.querySelector('.leaf-naranja')?.classList.add('leaf-naranja');
+              }
+              // Default: colores mixtos (otoño)
+          }
+
+          // Inicializar con colores mixtos (verano otoño)
+          updateLeafColors('mixed');
+
+          // Función para activar transición con animación suave
+          function activateTransition(enteringCategory) {
+              if (!transitionScreen) return;
+
+              // Mostrar overlay con fade-in
+              transitionScreen.classList.add('active');
+
+              // Esperar a que termine la animación de entrada
+              setTimeout(() => {
+                  // Ocultar transición
+                  transitionScreen.classList.remove('active');
+              }, 800);
+          }
+
+          // Exponer funciones para usar en otras páginas
+          window.activateTransition = activateTransition;
+          window.updateLeafColors = updateLeafColors;
+      });
+  </script>
+
 </body>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-logo">
+<span class="fas fa-heart"></span> refitt_indumentariadeportiva
+</div>
+<p>Calzas largas | Calzas cortas | remeras | Combos</p>
+</footer>
+
+ <script>
+      // Esta línea asegura que las hojas no afecten el footer con z-index alto
+      const hojasFooter = document.querySelectorAll('.hoja');
+      hojasFooter.forEach(h => h.style.zIndex = "9998");
+  </script>
 </html>
