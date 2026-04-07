@@ -101,7 +101,7 @@ z-index:-1;
 /* SIDEBAR */
 
 .sidebar{
-width:250px;
+width:306px;
 background:white;
 padding:30px;
 border-radius:10px;
@@ -129,9 +129,9 @@ transition:0.3s ease;
 }
 
 .cart-icon span{
-position:absolute;
-top:8px;
-right:-18px;
+position:relative;
+
+
 background: linear-gradient(135deg, var(--rojo-borgoña), var(--naranja-queimado));
 color: white;
 font-size: 12px;
