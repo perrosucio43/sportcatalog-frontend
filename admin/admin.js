@@ -133,7 +133,7 @@ div.innerHTML = `
 <img src="${p.imageUrl}" width="100">
 <p>${p.name}</p>
 <p>$${p.price}</p>
-<button onclick="deleteProduct('${p.id}')">Eliminar</button>
+<button onclick="deleteProduct('${p.id}')" class="learn-more">Eliminar</button>
 `;
 
 container.appendChild(div);

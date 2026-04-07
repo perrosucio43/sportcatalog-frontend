@@ -1,14 +1,39 @@
+<link rel="stylesheet" href="styles-admin.css">
+<body >
 
+    <div class="perrito">
+
+
+        <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+	<div class="wheel"></div>
+	<div class="hamster">
+		<div class="hamster__body">
+			<div class="hamster__head">
+				<div class="hamster__ear"></div>
+				<div class="hamster__eye"></div>
+				<div class="hamster__nose"></div>
+			</div>
+			<div class="hamster__limb hamster__limb--fr"></div>
+			<div class="hamster__limb hamster__limb--fl"></div>
+			<div class="hamster__limb hamster__limb--br"></div>
+			<div class="hamster__limb hamster__limb--bl"></div>
+			<div class="hamster__tail"></div>
+		</div>
+	</div>
+	<div class="spoke"></div>
+</div>
+
+    </div>
 
 <h1>Panel Admin</h1>
-<button  id ="logout">desloguear</button>
+<button  class="learn-more">desloguear</button>
 <h2>Crear producto</h2>
 
 <form id="product-form">
 
-<input id="name" placeholder="Nombre">
+<input class="input" placeholder="Nombre">
 
-<input id="price" type="number" placeholder="Precio">
+<input class="input" type="number" placeholder="Precio">
 
 <div class="upload-box" id="drop-zone">
 
@@ -20,11 +45,11 @@
 
 </div>
 
-<input id="description" placeholder="Descripción">
+<input class="input" placeholder="Descripción">
 
 <select id="category"></select>
 
-<button type="submit">Crear</button>
+<button class="learn-more">Crear</button>
 
 </form>
 
@@ -39,3 +64,6 @@
 
 
 <script src="admin.js"></script>
+
+</body>
+    
